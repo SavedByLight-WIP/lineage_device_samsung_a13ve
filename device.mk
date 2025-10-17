@@ -4,8 +4,20 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
+# Lineage Overlays
+PRODUCT_PACKAGES += \
+    LineagePartsOverlay \
+    FrameworksResOverlayA13ve \
+    SystemUIOverlayA13ve \
+    SettingsOverlayA13ve
+
+# Include lineage overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/lineage/overlay/common
 
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
