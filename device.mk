@@ -239,7 +239,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/a13ve/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
-
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl \
@@ -249,7 +248,6 @@ PRODUCT_COPY_FILES += \
 # If you have specific vendor keylayouts, add them too
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/Vendor_Samsung_Product_a13ve.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_Samsung_Product_a13ve.kl
-
 
 # Init scripts
 PRODUCT_COPY_FILES += \
