@@ -153,3 +153,14 @@ vendor.rild.libargs=-d /dev/ttyC0
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
+
+# Debugging
+persist.vendor.dbg.ims_volte_enable=1
+persist.vendor.radio.adb_log_on=1
+persist.vendor.radio.log_loc=1
+
+# Camera debugging
+persist.vendor.camera.dbg=1
+
+# Audio debugging
+persist.vendor.audio.dbg=1
