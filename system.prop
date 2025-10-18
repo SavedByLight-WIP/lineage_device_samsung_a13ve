@@ -1,4 +1,27 @@
+# Device & Build
 Build.BRAND=MTK
+net.bt.name=Android
+ro.base_build=noah
+ro.binary.type=user
+ro.build.2ndbrand=false
+ro.build.PDA=A137FXXS9EYE2
+ro.build.changelist=28693178
+ro.build.display_build_number=true
+ro.build.official.developer=false
+ro.build.official.release=true
+ro.build.selinux=1
+ro.build.version.oneui=60100
+ro.build.version.security_index=1
+ro.build.version.sem=3401
+ro.build.version.sep=150100
+ro.oem_unlock_supported=1
+ro.product.cpu.abi2=armeabi
+ro.product.property_source_order=odm,vendor,product,system
+ro.product_ship=true
+ro.system.build.version.sehi=3403
+ro.system.qb.id=96481540
+
+# Bluetooth
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
@@ -13,7 +36,8 @@ bluetooth.profile.pan.nap.enabled=true
 bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
-com.samsung.speg.prelauncher.disable=true
+
+# Dalvik VM
 dalvik.vm.appimageformat=lz4
 dalvik.vm.dex2oat-Xms=64m
 dalvik.vm.dex2oat-Xmx=512m
@@ -37,36 +61,9 @@ dalvik.vm.usap_pool_size_min=1
 dalvik.vm.usap_refill_threshold=1
 dalvik.vm.useartservice=true
 dalvik.vm.usejit=true
-debug.atrace.tags.enableflags=0
-debug.sf.auto_latch_unsignaled=false
-debug.sf.enable_gl_backpressure=0
-debug.sf.enable_transaction_tracing=false
-debug.sf.latch_unsignaled=true
-debug.sf.predict_hwc_composition_strategy=0
-log.tag.ClatdController=D
-log.tag.ConnectivityManager=D
-log.tag.ConnectivityService=D
-log.tag.IptablesRestoreController=D
-log.tag.NetworkLogger=D
-media.stagefright.thumbnail.prefer_hw_codecs=true
-mediatek.wlan.ctia=0
-net.bt.name=Android
-persist.log.level=0xFFFFFFFF
-persist.log.semlevel=0xFFFFFF00
-persist.log.tag.BufferQueueDump=I
-persist.log.tag.BufferQueueProducer=I
-persist.log.tag.GraphicBuffer=I
-persist.log.tag.SurfaceControl=I
-persist.radio.sib16_support=1
-persist.sys.fuse.passthrough.enable=true
-persist.traced.enable=1
-persist.vendor.mdlog.flush_log_ratio=0
-persist.vendor.mtk.vilte.enable=1
-persist.vendor.pco5.radio.ctrl=0
-persist.vendor.pms_removable=1
-persist.vendor.vilte_support=1
-persist.vendor.vzw_device_type=0
-persist.vendor.wfc.sys_wfc_support=1
+dalvik.vm.native.bridge=0
+
+# Package Manager
 pm.dexopt.ab-ota=speed-profile
 pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot-after-mainline-update=verify
@@ -82,85 +79,111 @@ pm.dexopt.install-bulk-secondary-downgraded=extract
 pm.dexopt.install-fast=skip
 pm.dexopt.post-boot=extract
 pm.dexopt.shared=speed
-qemu.hw.mainkeys=0
-ro.actionable_compatible_property.enabled=true
-ro.allow.mock.location=0
+
+# Display & Graphics
+debug.sf.auto_latch_unsignaled=false
+debug.sf.enable_gl_backpressure=0
+debug.sf.enable_transaction_tracing=false
+debug.sf.latch_unsignaled=true
+debug.sf.predict_hwc_composition_strategy=0
+ro.surface_flinger.has_HDR_display=false
+ro.opengles.version=196610
+
+# Audio
 ro.audio.silent=0
 ro.audio.spatializer_enabled=true
 ro.audio.usb.period_us=16000
-ro.base_build=noah
-ro.binary.type=user
-ro.build.2ndbrand=false
-ro.build.PDA=A137FXXS9EYE2
-ro.build.changelist=28693178
-ro.build.display_build_number=true
-ro.build.official.developer=false
-ro.build.official.release=true
-ro.build.selinux=1
-ro.build.version.oneui=60100
-ro.build.version.security_index=1
-ro.build.version.sem=3401
-ro.build.version.sep=150100
+vendor.af.dynamic.sleeptime.enable=true
+vendor.af.pausewait.enable=false
+vendor.af.threshold.src_and_effect_count=5
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+vendor.mtk_thumbnail_optimization=true
+
+# Wifi & Network
+mediatek.wlan.ctia=0
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+ro.wifi.channels=
+
+# Camera
 ro.camera.sound.forced=0
+
+# Radio
+persist.radio.sib16_support=1
+persist.vendor.pco5.radio.ctrl=0
+persist.vendor.vzw_device_type=0
+ro.vendor.mtk_telephony_add_on_policy=0
+vendor.rild.libargs=-d /dev/ttyC0
+
+# IMS & Volte
+persist.vendor.mtk.vilte.enable=1
+persist.vendor.vilte_support=1
+persist.vendor.wfc.sys_wfc_support=1
+
+# Debug
+debug.atrace.tags.enableflags=0
+log.tag.ClatdController=D
+log.tag.ConnectivityManager=D
+log.tag.ConnectivityService=D
+log.tag.IptablesRestoreController=D
+log.tag.NetworkLogger=D
+persist.log.level=0xFFFFFFFF
+persist.log.semlevel=0xFFFFFF00
+persist.log.tag.BufferQueueDump=I
+persist.log.tag.BufferQueueProducer=I
+persist.log.tag.GraphicBuffer=I
+persist.log.tag.SurfaceControl=I
+persist.traced.enable=1
+persist.vendor.dbg.ims_volte_enable=1
+persist.vendor.radio.adb_log_on=1
+persist.vendor.radio.log_loc=1
+persist.vendor.camera.dbg=1
+persist.vendor.audio.dbg=1
+persist.vendor.mdlog.flush_log_ratio=0
+
+# System & Framework
+com.samsung.speg.prelauncher.disable=true
+persist.sys.fuse.passthrough.enable=true
+persist.vendor.pms_removable=1
+qemu.hw.mainkeys=0
+ro.actionable_compatible_property.enabled=true
+ro.allow.mock.location=0
 ro.config.dmverity=N
 ro.config.iccc_version=3.0
 ro.config.knox=v30
 ro.config.per_app_memcg=false
 ro.config.rm_preload_enabled=1
-ro.dalvik.vm.native.bridge=0
 ro.iorapd.enable=false
 ro.kernel.qemu=0
 ro.kernel.zio=38,108,105,16
-ro.mediatek.version.branch=alps-mp-u0.mssi1.tc10sp
-ro.mediatek.version.build.branch=
-ro.mediatek.version.release=alps-mp-u0.mp1.tc10sp-V1.55
-ro.mediatek.wlan.p2p=1
-ro.mediatek.wlan.wsc=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-ro.mtk_perf_simple_start_win=1
-ro.oem_unlock_supported=1
-ro.opengles.version=196610
 ro.postinstall.fstab.prefix=/system
-ro.product.cpu.abi2=armeabi
-ro.product.property_source_order=odm,vendor,product,system
-ro.product_ship=true
 ro.security.fips.ux=Disabled
-ro.surface_flinger.has_HDR_display=false
-ro.sys.usb.bicr=no
-ro.sys.usb.charging.only=yes
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
-ro.system.build.version.sehi=3403
-ro.system.qb.id=96481540
-ro.vendor.customer_logpath=/data
-ro.vendor.have_aee_feature=1
-ro.vendor.mtk_flv_playback_support=1
-ro.vendor.mtk_omacp_support=1
-ro.vendor.mtk_telephony_add_on_policy=0
-ro.vendor.qti.va_aosp.support=1
-ro.wifi.channels=
 ro.zygote.preload.enable=0
 security.perf_harden=1
 sys.hqm.support=true
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
-vendor.af.dynamic.sleeptime.enable=true
-vendor.af.pausewait.enable=false
-vendor.af.threshold.src_and_effect_count=5
-vendor.mtk_thumbnail_optimization=true
-vendor.rild.libargs=-d /dev/ttyC0
-wifi.direct.interface=p2p0
-wifi.interface=wlan0
-wifi.tethering.interface=ap0
 
-# Debugging
-persist.vendor.dbg.ims_volte_enable=1
-persist.vendor.radio.adb_log_on=1
-persist.vendor.radio.log_loc=1
+# USB
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
 
-# Camera debugging
-persist.vendor.camera.dbg=1
-
-# Audio debugging
-persist.vendor.audio.dbg=1
+# MTK
+ro.mediatek.version.branch=alps-mp-u0.mssi1.tc10sp
+ro.mediatek.version.build.branch=
+ro.mediatek.version.release=alps-mp-u0.mp1.tc10sp-V1.55
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+ro.mtk_perf_simple_start_win=1
+ro.vendor.customer_logpath=/data
+ro.vendor.have_aee_feature=1
+ro.vendor.mtk_flv_playback_support=1
+ro.vendor.mtk_omacp_support=1
+ro.vendor.qti.va_aosp.support=1
