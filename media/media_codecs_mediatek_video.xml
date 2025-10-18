@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MediaCodecs>
+    <VideoEncoder name="OMX.MTK.VIDEO.ENCODER.AVC" type="video/avc" />
+    <VideoEncoder name="OMX.MTK.VIDEO.ENCODER.HEVC" type="video/hevc" />
+    
+    <VideoDecoder name="OMX.MTK.VIDEO.DECODER.AVC" type="video/avc" />
+    <VideoDecoder name="OMX.MTK.VIDEO.DECODER.HEVC" type="video/hevc" />
+</MediaCodecs>

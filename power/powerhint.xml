@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<powerhint>
+    <hint id="INTERACTION">
+        <duration>1000</duration>
+    </hint>
+    <hint id="LAUNCH">
+        <duration>2000</duration>
+    </hint>
+</powerhint>

@@ -1,0 +1,14 @@
+{
+    "ThermalEngineConfig": {
+        "sensors": {
+            "mtktscpu": {
+                "temp_throttling": 85000,
+                "temp_shutdown": 95000
+            },
+            "mtktsbattery": {
+                "temp_throttling": 45000,
+                "temp_shutdown": 60000
+            }
+        }
+    }
+}

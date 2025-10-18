@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gpu_working>
+    <total_records>1</total_records>
+    <record>
+        <platform>mt6768</platform>
+        <freq>800</freq>
+        <voltage>800000</voltage>
+    </record>
+</gpu_working>
