@@ -1,0 +1,6 @@
+# GPIO Keys for Samsung A13ve
+key 116   POWER   WAKE
+key 115   VOLUME_UP   WAKE
+key 114   VOLUME_DOWN   WAKE
+key 172   HOME   VIRTUAL
+# Add other hardware keys as needed

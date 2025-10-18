@@ -181,10 +181,11 @@ PRODUCT_PACKAGES += \
 # Copy configuration files from dump
 PRODUCT_COPY_FILES += \
     device/samsung/a13ve/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    device/samsung/a13ve/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     device/samsung/a13ve/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     device/samsung/a13ve/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
-    device/samsung/a13ve/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    device/samsung/a13ve/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+    device/samsung/a13ve/configs/media/media_codecs_mediatek_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_audio.xml \
+    device/samsung/a13ve/configs/media/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_video.xml 
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -229,18 +230,6 @@ PRODUCT_PACKAGES += \
     mtk_agpsd \
     mtk_wlan_loader
 
-# Audio configuration files (extract from dump)
-PRODUCT_COPY_FILES += \
-    device/samsung/a13ve/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    device/samsung/a13ve/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
-
-# Media configuration files (extract from dump)
-PRODUCT_COPY_FILES += \
-    device/samsung/a13ve/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    device/samsung/a13ve/configs/media/media_codecs_mediatek_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_audio.xml \
-    device/samsung/a13ve/configs/media/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_video.xml \
-    device/samsung/a13ve/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
-
 # WiFi configuration
 PRODUCT_COPY_FILES += \
     device/samsung/a13ve/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -250,9 +239,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/a13ve/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
-# Keylayout files
+
+# Keylayouts
 PRODUCT_COPY_FILES += \
-    device/samsung/a13ve/configs/keylayout/Generic.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic.kl
+    $(LOCAL_PATH)/configs/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl \
+    $(LOCAL_PATH)/configs/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchscreen.kl \
+    $(LOCAL_PATH)/configs/idc/sec_touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_touchscreen.idc
+
+# If you have specific vendor keylayouts, add them too
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_Samsung_Product_a13ve.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_Samsung_Product_a13ve.kl
+
 
 # Init scripts
 PRODUCT_COPY_FILES += \

@@ -1,0 +1,5 @@
+# Example for specific input device
+# You'll need to get the actual vendor and product IDs from your device
+key 1     BACK    VIRTUAL
+key 2     HOME    VIRTUAL
+key 3     APP_SWITCH VIRTUAL

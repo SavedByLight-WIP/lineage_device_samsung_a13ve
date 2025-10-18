@@ -1,0 +1,3 @@
+# Touchscreen key layout
+# This file is intentionally left mostly empty for touchscreen
+# as it handles touch events rather than key events
