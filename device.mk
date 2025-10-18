@@ -142,7 +142,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service.mtk-lazy
 
-# RIL (from dump - has MTK RIL)
+# RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0.vendor \
     android.hardware.radio@1.1.vendor \
@@ -220,6 +220,69 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+    
+# MTK specific packages
+PRODUCT_PACKAGES += \
+    nvram_daemon \
+    thermal \
+    thermal_manager \
+    mtk_agpsd \
+    mtk_wlan_loader
+
+# Audio configuration files (extract from dump)
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    device/samsung/a13ve/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
+
+# Media configuration files (extract from dump)
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    device/samsung/a13ve/configs/media/media_codecs_mediatek_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_audio.xml \
+    device/samsung/a13ve/configs/media/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_video.xml \
+    device/samsung/a13ve/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
+# WiFi configuration
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    device/samsung/a13ve/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+# GPS configuration
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
+
+# Keylayout files
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/configs/keylayout/Generic.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic.kl
+
+# Init scripts
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/init/init.mt6768.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mt6768.rc
+
+# Public libraries
+PRODUCT_COPY_FILES += \
+    device/samsung/a13ve/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Additional properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_protocol1_rat_config=C/Lf/Lt/W/T/G \
+    ro.vendor.mtk_ps2_rat=L/W/G \
+    ro.vendor.mtk_lte_support=1 \
+    ro.vendor.mtk_wfc_support=1 \
+    ro.vendor.mtk_ims_support=1 \
+    ro.vendor.mtk_volte_support=1
+
+# Enable IMS and VoLTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
+
+# MediaTek power configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_perf_simple_start_win=1 \
+    ro.vendor.mtk_perf_fast_start_win=1 \
+    ro.vendor.mtk_perf_response_time=1
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.enableswap:$(TARGET_COPY_OUT_RAMDISK)/fstab.enableswap
