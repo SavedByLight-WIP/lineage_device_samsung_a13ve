@@ -1,0 +1,12 @@
+# Device-specific properties
+vendor.camera.                  u:object_r:vendor_camera_prop:s0
+vendor.audio.                   u:object_r:vendor_audio_prop:s0
+vendor.display.                 u:object_r:vendor_display_prop:s0
+persist.vendor.                 u:object_r:vendor_persist_prop:s0
+ro.vendor.                      u:object_r:vendor_config_prop:s0
+
+# Samsung-specific properties
+ro.ril.                         u:object_r:radio_prop:s0
+gsm.                            u:object_r:radio_prop:s0
+persist.radio.                  u:object_r:radio_prop:s0
+ro.telephony.                   u:object_r:radio_prop:s0

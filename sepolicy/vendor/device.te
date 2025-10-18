@@ -1,0 +1,19 @@
+# Device type declarations
+
+# Device types
+type a13ve_device, dev_type, fs_type;
+type samsung_device, dev_type;
+
+# Vendor types
+type vendor_camera_prop, property_type;
+type vendor_audio_prop, property_type;
+type vendor_display_prop, property_type;
+type vendor_persist_prop, property_type;
+type vendor_config_prop, property_type;
+
+# Service types
+type vendor_camera_service, service_manager_type;
+type vendor_audio_service, service_manager_type;
+
+# File types
+type vendor_configs_file, file_type;

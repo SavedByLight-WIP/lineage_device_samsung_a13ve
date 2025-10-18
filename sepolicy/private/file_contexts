@@ -1,0 +1,9 @@
+# Device nodes
+/dev/block/platform/bootdevice/by-name/.* u:object_r:block_device:s0
+/dev/block/bootdevice/by-name/.* u:object_r:block_device:s0
+/dev/ttyMSM[0-9]* u:object_r:tty_device:s0
+/dev/uhid u:object_r:uhid_device:s0
+
+# Vendor files
+/vendor/bin/.* u:object_r:vendor_exec:s0
+/vendor/lib(64)?/.*\.so u:object_r:same_process_hal_file:s0

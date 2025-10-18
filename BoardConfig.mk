@@ -117,6 +117,22 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2025-06-01
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/a13ve/sepolicy/vendor \
+    device/samsung/a13ve/sepolicy/private
+
+BOARD_SEPOLICY_UNION += \
+    a13ve.te \
+    device.te \
+    file_contexts \
+    property_contexts \
+    service_contexts \
+    hwservice_contexts
+
+# Precompiled SEPolicy
+BOARD_SEPOLICY_UNION += precompiled_sepolicy
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3

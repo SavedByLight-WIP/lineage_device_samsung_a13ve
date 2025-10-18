@@ -1,0 +1,6 @@
+# Samsung vendor properties
+ro.vendor.samsung.* u:object_r:vendor_config_prop:s0
+persist.vendor.samsung.* u:object_r:vendor_persist_prop:s0
+
+# Hardware properties
+ro.hardware.* u:object_r:vendor_config_prop:s0

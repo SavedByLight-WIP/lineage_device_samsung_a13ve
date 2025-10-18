@@ -1,0 +1,32 @@
+# A13VE specific policies
+
+# Device-specific types
+type a13ve_device, dev_type, fs_type;
+type a13ve_exec, exec_type, vendor_file_type, file_type;
+
+# Permissions for vendor init
+allow vendor_init block_device:blk_file { read write open };
+allow vendor_init vendor_file:file { execute read open };
+allow vendor_init system_file:file { execute read open };
+
+# Camera permissions
+allow hal_camera_default camera_device:chr_file { read write open };
+allow hal_camera_default vendor_camera_prop:property_service { set };
+
+# Audio permissions
+allow hal_audio_default audio_device:chr_file { read write open };
+allow hal_audio_default vendor_audio_prop:property_service { set };
+
+# Graphics permissions
+allow hal_graphics_composer_device:chr_file { read write open };
+allow hal_graphics_allocator sysfs:file { read write open };
+
+# Sensor permissions
+allow hal_sensors_default sensor_device:chr_file { read write open };
+
+# Fingerprint permissions
+allow hal_fingerprint_default fingerprint_device:chr_file { read write open };
+
+# RIL permissions
+allow rild radio_device:chr_file { read write open };
+allow rild radio_prop:property_service { set };

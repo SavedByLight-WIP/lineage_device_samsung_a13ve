@@ -1,0 +1,3 @@
+# Additional domain permissions
+allow domain vendor_file:file { read open };
+allow domain vendor_configs_file:file { read open };
