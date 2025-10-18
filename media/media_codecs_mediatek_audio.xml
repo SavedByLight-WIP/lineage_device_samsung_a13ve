@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MediaCodecs>
+    <Encoders>
+        <MediaCodec name="OMX.MTK.AUDIO.ENCODER.AAC" type="audio/mp4a-latm" >
+            <Limit name="bitrate" range="1-500000" />
+            <Limit name="sample-rate" range="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+            <Limit name="channel-count" range="1,2" />
+        </MediaCodec>
+        
+        <MediaCodec name="OMX.MTK.AUDIO.ENCODER.AMR" type="audio/3gpp" >
+            <Limit name="bitrate" range="1-500000" />
+            <Limit name="sample-rate" range="8000" />
+            <Limit name="channel-count" range="1" />
+        </MediaCodec>
+    </Encoders>
+    
+    <Decoders>
+        <MediaCodec name="OMX.MTK.AUDIO.DECODER.AAC" type="audio/mp4a-latm" >
+            <Limit name="sample-rate" range="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+            <Limit name="channel-count" range="1,2" />
+        </MediaCodec>
+        
+        <MediaCodec name="OMX.MTK.AUDIO.DECODER.AMR" type="audio/3gpp" >
+            <Limit name="sample-rate" range="8000" />
+            <Limit name="channel-count" range="1" />
+        </MediaCodec>
+        
+        <MediaCodec name="OMX.MTK.AUDIO.DECODER.FLAC" type="audio/flac" >
+            <Limit name="sample-rate" range="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000" />
+            <Limit name="channel-count" range="1,2" />
+        </MediaCodec>
+        
+        <MediaCodec name="OMX.MTK.AUDIO.DECODER.MP3" type="audio/mpeg" >
+            <Limit name="sample-rate" range="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+            <Limit name="channel-count" range="1,2" />
+        </MediaCodec>
+    </Decoders>
+</MediaCodecs>

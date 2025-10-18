@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MediaCodecs>
+    <Include href="media_codecs_mediatek_video.xml" />
+    
+    <Settings>
+        <Setting name="max-video-encoder-input-buffers" value="9" />
+    </Settings>
+    
+    <Encoders>
+        <MediaCodec name="OMX.MTK.VIDEO.ENCODER.AVC" type="video/avc" >
+            <Limit name="bitrate" range="1-50000000" />
+            <Limit name="size" min="2x2" max="3840x2176" />
+            <Limit name="alignment" value="2" />
+            <Limit name="block-size" value="16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="frame-rate" range="1-120" />
+            <Feature name="adaptive-playback" />
+        </MediaCodec>
+    </Encoders>
+    
+    <Decoders>
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.AVC" type="video/avc" >
+            <Limit name="size" min="2x2" max="3840x2176" />
+            <Limit name="alignment" value="2" />
+            <Limit name="block-size" value="16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Feature name="adaptive-playback" />
+        </MediaCodec>
+    </Decoders>
+</MediaCodecs>

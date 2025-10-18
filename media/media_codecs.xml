@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MediaCodecs>
+    <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_google_telephony.xml" />
+    <Include href="media_codecs_google_video.xml" />
+    <Include href="media_codecs_mediatek_audio.xml" />
+    <Include href="media_codecs_mediatek_video.xml" />
+    
+    <Settings>
+        <Setting name="use-dsp-audio-decoder" value="true" />
+        <Setting name="use-dsp-video-decoder" value="true" />
+    </Settings>
+</MediaCodecs>

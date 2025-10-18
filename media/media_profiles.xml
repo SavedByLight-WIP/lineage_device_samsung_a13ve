@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MediaSettings>
+    <CamcorderProfiles>
+        <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
+            <Video codec="h264"
+                   bitRate="17000000"
+                   width="1920"
+                   height="1080"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="96000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        
+        <EncoderProfile quality="720p" fileFormat="mp4" duration="60">
+            <Video codec="h264"
+                   bitRate="12000000"
+                   width="1280"
+                   height="720"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="96000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        
+        <EncoderProfile quality="480p" fileFormat="mp4" duration="60">
+            <Video codec="h264"
+                   bitRate="6000000"
+                   width="720"
+                   height="480"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="96000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+    </CamcorderProfiles>
+    
+    <ImageEncoding quality="90" />
+    <ImageDecoding memCap="20000000" />
+    
+    <Camera profiles="0,1,2" />
+</MediaSettings>

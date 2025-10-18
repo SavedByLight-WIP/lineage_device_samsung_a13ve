@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<audioPolicyConfiguration version="7.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <globalConfiguration speaker_drc_enabled="true"/>
+    
+    <modules>
+        <!-- Primary Audio HAL -->
+        <module name="primary" halVersion="7.0">
+            <attachedDevices>
+                <item>Speaker</item>
+                <item>Built-In Mic</item>
+                <item>BLUETOOTH</item>
+            </attachedDevices>
+            
+            <mixPorts>
+                <!-- Output -->
+                <mixPort name="primary output" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                
+                <mixPort name="deep_buffer" role="source" flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                
+                <mixPort name="compress_offload" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD">
+                    <profile name="" format="AUDIO_FORMAT_MP3"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                
+                <!-- Input -->
+                <mixPort name="primary input" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_MONO|AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
+            </mixPorts>
+            
+            <devicePorts>
+                <!-- Output devices -->
+                <devicePort tagName="Speaker" type="AUDIO_DEVICE_OUT_SPEAKER" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
+                
+                <devicePort tagName="Wired Headset" type="AUDIO_DEVICE_OUT_WIRED_HEADSET" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
+                
+                <devicePort tagName="BLUETOOTH" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
+                
+                <!-- Input devices -->
+                <devicePort tagName="Built-In Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_MONO|AUDIO_CHANNEL_IN_STEREO"/>
+                </devicePort>
+                
+                <devicePort tagName="Wired Headset Mic" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_MONO"/>
+                </devicePort>
+            </devicePorts>
+            
+            <routes>
+                <!-- Output routes -->
+                <route type="mix" sink="Speaker" sources="primary output,deep_buffer,compress_offload"/>
+                <route type="mix" sink="Wired Headset" sources="primary output,deep_buffer,compress_offload"/>
+                <route type="mix" sink="BLUETOOTH" sources="primary output,deep_buffer,compress_offload"/>
+                
+                <!-- Input routes -->
+                <route type="mix" sink="primary input" sources="Built-In Mic,Wired Headset Mic"/>
+            </routes>
+        </module>
+        
+        <!-- A2DP Audio HAL -->
+        <module name="a2dp" halVersion="7.0">
+            <attachedDevices>
+                <item>BT A2DP Out</item>
+            </attachedDevices>
+            <mixPorts>
+                <mixPort name="a2dp output" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+            </mixPorts>
+            <devicePorts>
+                <devicePort tagName="BT A2DP Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink"/>
+            </devicePorts>
+            <routes>
+                <route type="mix" sink="BT A2DP Out" sources="a2dp output"/>
+            </routes>
+        </module>
+        
+        <!-- USB Audio HAL -->
+        <module name="usb" halVersion="7.0">
+            <attachedDevices>
+                <item>USB Device Out</item>
+            </attachedDevices>
+            <mixPorts>
+                <mixPort name="usb output" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+            </mixPorts>
+            <devicePorts>
+                <devicePort tagName="USB Device Out" type="AUDIO_DEVICE_OUT_USB_DEVICE" role="sink"/>
+            </devicePorts>
+            <routes>
+                <route type="mix" sink="USB Device Out" sources="usb output"/>
+            </routes>
+        </module>
+    </modules>
+    
+    <xi:include href="audio_policy_volumes.xml"/>
+    <xi:include href="default_volume_tables.xml"/>
+</audioPolicyConfiguration>
