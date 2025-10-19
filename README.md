@@ -7,6 +7,7 @@ git clone https://github.com/SavedByLight-WIP/android_vendor_samsung_a13ve.git -
 # Build
 ```bash
 source build/envsetup.sh
+lunch lineage_a13ve-bp2a-eng
 croot
 breakfast bacon
 croot
