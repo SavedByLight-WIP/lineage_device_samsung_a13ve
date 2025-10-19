@@ -176,7 +176,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.1.vendor \
     android.hardware.wifi@1.2.vendor \
     android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi@1.4.vendor
+    android.hardware.wifi@1.4.vendor \
+    libwifi-hal-mediatek
 
 # Copy configuration files from dump
 PRODUCT_COPY_FILES += \
