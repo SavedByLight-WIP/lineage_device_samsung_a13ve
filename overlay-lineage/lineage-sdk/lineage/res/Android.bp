@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "LineagePartsOverlay",
+    device_specific: true,
+}

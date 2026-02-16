@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Device info -->
+
+    <string name="config_networkLocationProviderPackageName">com.google.android.gms</string>
+
+    <string name="config_defaultDnsServer">8.8.8.8</string>
+
+</resources>

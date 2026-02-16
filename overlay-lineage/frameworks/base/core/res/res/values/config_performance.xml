@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Performance Settings -->
+
+    <integer name="config_cpu_boost_timeout">1500</integer>
+
+    <integer name="config_cpu_min_freq">500000</integer>
+
+    <integer name="config_cpu_max_freq">2000000</integer>
+
+    
+
+    <!-- Memory Management -->
+
+    <integer name="config_low_ram_threshold">512</integer>
+
+    <bool name="config_enable_ram_expand">false</bool>
+
+</resources>

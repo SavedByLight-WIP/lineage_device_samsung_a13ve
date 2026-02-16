@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- LineageOS Features -->
+
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <bool name="config_enableNavigationBar">false</bool>
+
+    
+
+    <!-- Styles -->
+
+    <bool name="config_accelerateSurfaceFlinger">true</bool>
+
+    
+
+    <!-- Theming -->
+
+    <bool name="config_materialUx">true</bool>
+
+</resources>

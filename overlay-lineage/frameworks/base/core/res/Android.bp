@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FrameworksResOverlayA13ve",
+    device_specific: true,
+}

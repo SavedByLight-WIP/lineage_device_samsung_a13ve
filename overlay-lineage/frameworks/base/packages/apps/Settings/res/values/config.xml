@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Show regulatory info in About Phone -->
+    <bool name="config_show_regulatory_info">true</bool>
+</resources>

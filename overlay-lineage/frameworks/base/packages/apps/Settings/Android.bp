@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsOverlayA13ve",
+    device_specific: true,
+}

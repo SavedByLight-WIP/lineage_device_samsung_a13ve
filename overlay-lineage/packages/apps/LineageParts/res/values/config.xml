@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Button Settings -->
+
+    <bool name="config_device_supports_wake_gestures">false</bool>
+
+    <bool name="config_show_volume_rocker_wake">true</bool>
+
+    
+
+    <!-- Status Bar Settings -->
+
+    <bool name="config_show_battery_light">true</bool>
+
+    <bool name="config_show_notification_light">true</bool>
+
+    
+
+    <!-- Gesture Settings -->
+
+    <bool name="config_support_double_tap_wake_gesture">false</bool>
+
+    <bool name="config_support_ambient_display_wake_gesture">false</bool>
+
+    
+
+    <!-- Trust Interface -->
+
+    <bool name="config_show_trust_preferences">true</bool>
+
+</resources>
