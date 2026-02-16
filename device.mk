@@ -80,10 +80,10 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.primary.mt6768 \
     audio.r_submix.default \
     audio.usb.default \
-    audio_policy.stub
+    audio_policy.stub \
+    #audio.primary.mt6768 
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -127,10 +127,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.0-service
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.samsung
-
 # Media (critical for MTK)
 PRODUCT_PACKAGES += \
     libstagefright_omx \
@@ -141,7 +137,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service.mtk-lazy
+    vendor.mediatek.hardware.mtkpower@1.0-service
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -169,7 +165,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0.vendor \
     android.hardware.vibrator@1.1.vendor \
-    android.hardware.vibrator@1.2.vendor
+    android.hardware.vibrator@1.2.vendor \
+    vendor.samsung.hardware.vibrator-service
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -227,10 +224,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
     
 # MTK specific packages
-PRODUCT_PACKAGES += \
-    nvram_daemon \
+#PRODUCT_PACKAGES += \
     thermal \
     thermal_manager \
+    nvram_daemon \
     mtk_agpsd \
     mtk_wlan_loader
 
