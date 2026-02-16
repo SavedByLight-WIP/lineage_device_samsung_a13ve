@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
-    vendor.mediatek.hardware.mtkpower@1.0-service
+    #vendor.mediatek.hardware.mtkpower@1.0-service
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor
 
 # Vibrator
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0.vendor \
     android.hardware.vibrator@1.1.vendor \
     android.hardware.vibrator@1.2.vendor \
