@@ -292,3 +292,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a13ve/a13ve-vendor.mk)
+
+# Add maintainer info (for unofficial builds)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.device.maintainer=SavedByLight
