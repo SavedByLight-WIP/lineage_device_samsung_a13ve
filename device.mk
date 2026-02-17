@@ -180,7 +180,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal
 
 # Copy configuration files from dump
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     device/samsung/a13ve/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     device/samsung/a13ve/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     device/samsung/a13ve/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
