@@ -252,7 +252,7 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    device/samsung/a13ve/init/init.mt6768.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mt6768.rc
+    device/samsung/a13ve/init/etc/init.mt6768.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mt6768.rc
 
 # Public libraries
 PRODUCT_COPY_FILES += \
