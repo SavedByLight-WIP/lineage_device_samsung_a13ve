@@ -14,8 +14,8 @@ typedef struct {
 } variant;
 
 static const variant international_models_a137f = {
-    .model = "SM-A528B",
-    .codename = "a52sxq"
+    .model = "SM-A137F",
+    .codename = "a13ve"
 };
 static const variant *all_variants[VARIANT_MAX] = {
     &international_models_a137f,
