@@ -281,7 +281,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_perf_response_time=1
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.enableswap:$(TARGET_COPY_OUT_RAMDISK)/fstab.enableswap
+    $(LOCAL_PATH)/init/etc/fstab.enableswap:$(TARGET_COPY_OUT_RAMDISK)/fstab.enableswap
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
