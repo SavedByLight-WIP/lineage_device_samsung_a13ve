@@ -1,7 +1,6 @@
 # Device type declarations
 
 # Device types
-type a13ve_device, dev_type, fs_type;
 type samsung_device, dev_type;
 
 # Vendor types
