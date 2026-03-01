@@ -1,31 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-
-    <!-- Status Bar -->
-
-    <bool name="config_showNotificationGutsOnHover">true</bool>
-
-    <bool name="config_showNavigationBar">false</bool>
-
-    
-
-    <!-- Quick Settings -->
-
-    <integer name="config_maxVisibleQuickSettingsTiles">9</integer>
-
-    <bool name="qs_show_brightness_slider">true</bool>
-
-    
-
-    <!-- Battery -->
-
-    <bool name="config_batteryless">false</bool>
-
-    
-
-    <!-- MediaTek Features -->
-
-    <bool name="config_hideNoSimState">false</bool>
-
+    <bool name="config_showNavigationBar">false</bool>
 </resources>
