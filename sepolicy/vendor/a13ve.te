@@ -6,6 +6,7 @@ type vendor_exec, exec_type, vendor_file_type, file_type;
 type vendor_firmware_file, file_type, vendor_file_type;
 type vendor_config_prop, property_type, vendor_property_type;
 type vendor_camera_service, service_manager_type;
+type vendor_display_prop, property_type;
 
 # Permissions for vendor init
 allow vendor_init sda_device:blk_file { read write open };
@@ -17,11 +18,13 @@ allow vendor_init system_file:file { execute read open };
 allow hal_camera_default camera_device:chr_file { read write open };
 allow hal_camera_default vendor_camera_prop:property_service { set };
 type vendor_camera_prop, property_type, vendor_property_type;
+type hal_camera_default, domain, hwservice_manager_type;
 
 # Audio permissions
 allow hal_audio_default audio_device:chr_file { read write open };
 allow hal_audio_default vendor_audio_prop:property_service { set };
 type vendor_audio_prop, property_type, vendor_property_type;
+type vendor_audio_service, service_manager_type;
 
 # Graphics permissions
 allow surfaceflinger hal_graphics_composer_device:chr_file { read write open };
