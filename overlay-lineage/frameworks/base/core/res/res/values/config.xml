@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- RIL Configuration -->
-    <integer name="config_voice_recognition_signal_type">0</integer>
-    <bool name="config_ignoreRildNetworkName">true</bool>
-    <!-- Display -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
-    <integer name="config_screenBrightnessSettingMaximum">255</integer>
-    <integer name="config_screenBrightnessDoze">17</integer>
-    <integer name="config_screenBrightnessDim">10</integer>
-    <!-- Audio -->
-    <bool name="config_use_strict_volume">false</bool>
-    <bool name="config_safe_media_volume_enabled">false</bool>
-    <!-- Bluetooth -->
-    <integer name="config_bluetooth_max_advertisers">5</integer>
-    <integer name="config_bluetooth_max_connected_audio_devices">5</integer>
-    <!-- Power Management -->
-    <integer name="config_autoPowerModeDynamicPressure">5000</integer>
-    <!-- MediaTek Specific -->
-    <bool name="config_enableMtkCustomFeatures">true</bool>
-    <!-- Camera -->
-    <string name="config_defaultCameraId" translatable="false">0</string>
-    <!-- Wi-Fi -->
-    <bool name="config_wifi_background_scan_support">true</bool>
-    <!-- Sensors -->
-    <integer name="config_cursor_drag_multiplier">3</integer>
+    <integer name="config_voice_recognition_signal_type">0</integer>
+    <bool name="config_ignoreRildNetworkName">true</bool>
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessDoze">17</integer>
+    <integer name="config_screenBrightnessDim">10</integer>
+    <bool name="config_use_strict_volume">false</bool>
+    <bool name="config_safe_media_volume_enabled">false</bool>
+    <integer name="config_bluetooth_max_advertisers">5</integer>
+    <integer name="config_bluetooth_max_connected_audio_devices">5</integer>
+    <integer name="config_autoPowerModeDynamicPressure">5000</integer>
+    <integer name="config_defaultCameraId">0</integer>
+    <bool name="config_wifi_background_scan_support">true</bool>
+    <integer name="config_cursor_drag_multiplier">3</integer>
 </resources>
