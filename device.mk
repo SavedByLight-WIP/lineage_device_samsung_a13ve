@@ -23,6 +23,11 @@ PRODUCT_PACKAGE_OVERLAYS += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+PRODUCT_PACKAGES += \
+    charon \
+    libcharon \
+    libstrongswan
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
