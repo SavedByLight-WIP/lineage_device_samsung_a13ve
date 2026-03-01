@@ -6,6 +6,7 @@ type a13ve_exec, exec_type, vendor_file_type;
 
 # Permissions for vendor init
 allow vendor_init sda_device:blk_file { read write open };
+type sda_device, dev_type, mlstrustedobject;
 allow vendor_init vendor_file:file { execute read open };
 allow vendor_init system_file:file { execute read open };
 
