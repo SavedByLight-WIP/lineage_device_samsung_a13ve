@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-
-    <!-- Display Settings -->
-
-    <bool name="config_show_dark_ui">true</bool>
-
-    <bool name="config_enable_display_white_balance">false</bool>
-
-    
-
-    <!-- Sound Settings -->
-
-    <bool name="config_show_dock_audio_settings">false</bool>
-
-    <bool name="config_show_media_volume">true</bool>
-
-    
-
-    <!-- Battery Settings -->
-
-    <bool name="config_show_battery_low_notification">true</bool>
-
-    
-
-    <!-- Storage Settings -->
-
-    <bool name="config_support_storage_manager">true</bool>
-
-    
-
-    <!-- Network Settings -->
-
-    <bool name="config_show_sim_contacts">true</bool>
-
+    <bool name="config_enable_display_white_balance">false</bool>
+    <bool name="config_show_dock_audio_settings">false</bool>
+    <bool name="config_support_storage_manager">true</bool>
 </resources>
