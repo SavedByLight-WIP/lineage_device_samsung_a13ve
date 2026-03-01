@@ -1,7 +1,0 @@
-<resources>
-
-    <string name="device_info_default">Samsung Galaxy A13</string>
-
-    <string name="config_wifi_tether_auto_off_ssid">SamsungA13</string>
-
-</resources>
