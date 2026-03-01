@@ -28,6 +28,7 @@ type sensor_device, dev_type;
 
 # Fingerprint permissions
 allow hal_fingerprint_default fingerprint_device:chr_file { read write open };
+type fingerprint_device, dev_type;
 
 # RIL permissions
 allow rild radio_device:chr_file { read write open };
