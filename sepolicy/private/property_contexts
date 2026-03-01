@@ -2,4 +2,3 @@
 vendor.camera.                  u:object_r:vendor_camera_prop:s0
 vendor.audio.                   u:object_r:vendor_audio_prop:s0
 vendor.display.                 u:object_r:vendor_display_prop:s0
-ro.vendor.                      u:object_r:vendor_config_prop:s0
