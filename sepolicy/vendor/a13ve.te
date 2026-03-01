@@ -2,7 +2,7 @@
 
 # Device-specific types
 type a13ve_device, dev_type, fs_type;
-type a13ve_exec, exec_type, vendor_file_type, file_type;
+type a13ve_exec, exec_type, vendor_file_type;
 
 # Permissions for vendor init
 allow vendor_init block_device:blk_file { read write open };
