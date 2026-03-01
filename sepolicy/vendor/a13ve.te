@@ -24,6 +24,7 @@ allow hal_graphics_allocator sysfs:file { read write open };
 
 # Sensor permissions
 allow hal_sensors_default sensor_device:chr_file { read write open };
+type sensor_device, dev_type;
 
 # Fingerprint permissions
 allow hal_fingerprint_default fingerprint_device:chr_file { read write open };
