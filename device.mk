@@ -280,6 +280,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_perf_fast_start_win=1 \
     ro.vendor.mtk_perf_response_time=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.dns1=8.8.8.8 \
+    net.dns2=8.8.4.4
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/etc/fstab.enableswap:$(TARGET_COPY_OUT_RAMDISK)/fstab.enableswap
 
