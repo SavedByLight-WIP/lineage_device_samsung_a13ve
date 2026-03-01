@@ -17,6 +17,7 @@ type vendor_camera_prop, property_type, vendor_property_type;
 # Audio permissions
 allow hal_audio_default audio_device:chr_file { read write open };
 allow hal_audio_default vendor_audio_prop:property_service { set };
+type vendor_audio_prop, property_type, vendor_property_type;
 
 # Graphics permissions
 allow surfaceflinger hal_graphics_composer_device:chr_file { read write open };
