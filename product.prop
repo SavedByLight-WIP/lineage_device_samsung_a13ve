@@ -48,5 +48,4 @@ ro.frp.pst=/dev/block/persistent
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # System Performance
-ro.dalvik.vm.enable_uffd_gc=false
 ro.product.cpu.pagesize.max=4096
