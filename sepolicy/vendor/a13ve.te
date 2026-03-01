@@ -18,7 +18,7 @@ allow vendor_init system_file:file { execute read open };
 allow hal_camera_default camera_device:chr_file { read write open };
 allow hal_camera_default vendor_camera_prop:property_service { set };
 typeattribute hal_camera_default hwservice_manager_type;
-type vendor_camera_prop, property_type, vendor_property_type;
+type vendor_camera_prop, property_type, vendor_property_type, vendor_internal_prop;
 
 # Audio permissions
 allow hal_audio_default audio_device:chr_file { read write open };
