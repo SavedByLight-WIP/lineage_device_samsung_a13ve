@@ -3,7 +3,7 @@
     <!-- RIL Configuration -->
     <integer name="config_voice_recognition_signal_type">0</integer>
     <bool name="config_ignoreRildNetworkName">true</bool>
-   <!-- Display -->
+    <!-- Display -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
     <integer name="config_screenBrightnessSettingMaximum">255</integer>
     <integer name="config_screenBrightnessDoze">17</integer>
