@@ -23,7 +23,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     charon \
     libcharon \
     libstrongswan
