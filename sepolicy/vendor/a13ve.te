@@ -19,6 +19,7 @@ allow hal_camera_default camera_device:chr_file { read write open };
 allow hal_camera_default vendor_camera_prop:property_service { set };
 typeattribute vendor_camera_prop vendor_property_type;
 typeattribute hal_camera_default hwservice_manager_type;
+type vendor_camera_prop, property_type, vendor_property_type;
 type hal_camera_default, domain, hwservice_manager_type;
 
 # Audio permissions
