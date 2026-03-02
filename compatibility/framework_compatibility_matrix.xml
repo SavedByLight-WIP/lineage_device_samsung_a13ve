@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<compatibility-matrix version="1.0" type="framework">
+<compatibility-matrix version="1.0" type="framework" level="6">
 
     <hal format="hidl" optional="true">
         <name>android.hardware.memtrack</name>
