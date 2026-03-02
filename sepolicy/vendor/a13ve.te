@@ -31,6 +31,7 @@ type vendor_audio_service, service_manager_type;
 allow surfaceflinger hal_graphics_composer_device:chr_file { read write open };
 type hal_graphics_composer_device, dev_type;
 allow hal_graphics_allocator sysfs:file { read write open };
+type hal_graphics_allocator, hwservice_manager_type;
 
 # Sensor permissions
 allow hal_sensors_default sensor_device:chr_file { read write open };
