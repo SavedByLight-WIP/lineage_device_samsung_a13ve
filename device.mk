@@ -21,7 +21,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/lineage/overlay/common
 
 # API levels
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 
 #PRODUCT_PACKAGES += \
     charon \
