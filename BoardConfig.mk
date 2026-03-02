@@ -162,6 +162,8 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_PROUDCT_COMPATIBILITY_MATRIX_FILE := device/samsung/a13ve/compatibility_matrix.device.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/samsung/a13ve/compatibility/framework_compatibility_matrix.xml
 
 
 # Inherit the proprietary files
