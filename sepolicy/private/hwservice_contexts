@@ -1,5 +1,5 @@
 # HW Services
 vendor.samsung.hardware.camera@4.0::ICamera u:object_r:hal_camera_default:s0
-vendor.samsung.hardware.audio@2.0::IAudio u:object_r:hal_audio_default:s0
+#vendor.samsung.hardware.audio@2.0::IAudio u:object_r:hal_audio_default:s0
 android.hardware.graphics.allocator@4.0::IAllocator u:object_r:hal_graphics_allocator:s0
 android.hardware.audio@7.0::IDevicesFactory  u:object_r:hal_audio_hwservice:s0
