@@ -1,3 +1,3 @@
 # Samsung vendor services
 vendor.samsung.hardware.camera u:object_r:vendor_camera_service:s0
-vendor.samsung.hardware.audio u:object_r:vendor_audio_service:s0
+android.hardware.audio@7.0::IDevicesFactory  u:object_r:hal_audio_hwservice:s0
