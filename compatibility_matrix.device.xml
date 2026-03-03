@@ -28,7 +28,7 @@
         vendor/samsung/interfaces/nfc/2.0/device_framework_compatibility_matrix.xml
         vendor/samsung/hardware/ril/URC/fcm/radio_framework_compatibility_matrix.xml
 -->
-<compatibility-matrix version="7.0" type="framework">
+<compatibility-matrix version="7.0" type="framework" level="7">
     <hal format="aidl" optional="true">
         <name>android.hardware.biometrics.face</name>
         <interface>
