@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <compatibility-matrix version="1.0" type="framework" level="7">
   <sepolicy>
+  <kernel-sepolicy-version>30</kernel-sepolicy-version>
   <sepolicy-version>202404</sepolicy-version>
   </sepolicy>
 </compatibility-matrix>
