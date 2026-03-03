@@ -2,8 +2,6 @@
 # Copyright (C) 2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
-#
-BOARD_SEPOLICY_VERS := 202404
 
 #PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -173,6 +171,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     device/samsung/a13ve/compatibility/framework_compatibility_matrix.xml
 
+BOARD_VNDK_VERSION := current
 
 # Inherit the proprietary files
 include vendor/samsung/a13ve/BoardConfigVendor.mk
