@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <compatibility-matrix version="1.0" type="framework" level="5">
   <sepolicy>
-  <kernel-sepolicy-version>30</kernel-sepolicy-version>
-  <sepolicy-version>202404</sepolicy-version>
+        <kernel-sepolicy-version>30</kernel-sepolicy-version>
+        <sepolicy-version>29.0</sepolicy-version>
+        <sepolicy-version>30.0</sepolicy-version>
+        <sepolicy-version>31.0</sepolicy-version>
+        <sepolicy-version>32.0</sepolicy-version>
+        <sepolicy-version>33.0</sepolicy-version>
+        <sepolicy-version>34.0</sepolicy-version>
   </sepolicy>
 </compatibility-matrix>
