@@ -26,7 +26,6 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_USE_VNDK_OVERRIDE := true
 #PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
-
 #PRODUCT_PACKAGES += \
     charon \
     libcharon \
@@ -306,3 +305,6 @@ $(call inherit-product, vendor/samsung/a13ve/a13ve-vendor.mk)
 # Add maintainer info (for unofficial builds)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.device.maintainer=SavedByLight
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.sepolicy.version=30.0
