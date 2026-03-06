@@ -173,7 +173,9 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     device/samsung/a13ve/compatibility/framework_compatibility_matrix.xml
 
-BOARD_VNDK_VERSION := current
+BOARD_VNDK_VERSION := 30
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+BUILD_WITHOUT_VENDOR := true   # if using prebuilt vendor
 
 # Inherit the proprietary files
 include vendor/samsung/a13ve/BoardConfigVendor.mk
